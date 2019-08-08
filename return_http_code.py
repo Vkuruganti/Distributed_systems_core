@@ -1,10 +1,11 @@
+# Author: Vas Kuruganti
 import httplib
 
 def get_status_code(host, path="/"):
     """ This function retreives the status code of a website by requesting
         HEAD data from the host. This means that it only requests the headers.
         If the host cannot be reached or something else goes wrong, it returns
-        None instead.
+        None instead
     """
     try:
         conn = httplib.HTTPConnection(host)
