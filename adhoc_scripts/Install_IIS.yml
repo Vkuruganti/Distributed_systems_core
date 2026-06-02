@@ -1,0 +1,12 @@
+# Ansible playbook to install IIS on a windows node to make it a webserver
+# Author: Vas K
+
+---
+- hosts: windows2
+  gather_facts: true
+
+  tasks:
+    - name: Install IIS (web server)
+      win_feature:
+        name: Web-Server
+        state: present

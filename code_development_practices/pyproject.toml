@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "distributed-systems-analyzer"
+version = "0.1.0"
+description = "Static architectural readiness analysis for distributed applications"
+requires-python = ">=3.9"
+
+[project.scripts]
+ds-analyze = "distributed_systems_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["distributed_systems_analyzer*"]
+
